@@ -1,12 +1,15 @@
 <template>
   <ion-page>
-    <ion-header :translucent="true">
+    <ion-header>
       <ion-toolbar color="primary">
         <ion-buttons slot="start">
           <ion-back-button></ion-back-button>
         </ion-buttons>
         <ion-title>Game</ion-title>
         <ion-buttons slot="end">
+          <ion-button @click="share(toastController)">
+            <ion-icon slot="icon-only" :icon="shareOutline"></ion-icon>
+          </ion-button>
           <ion-button @click="openAbout">
             <ion-icon slot="icon-only" :icon="helpCircleOutline"></ion-icon>
           </ion-button>
@@ -43,10 +46,11 @@
   import { 
     IonContent, IonHeader, IonPage, IonTitle, IonIcon, IonButtons,
     IonToolbar, IonCard, IonCardContent, IonBackButton, IonButton,
-    IonGrid, IonRow, IonCol, modalController
+    IonGrid, IonRow, IonCol, modalController, toastController
   } from '@ionic/vue';
   import AboutPage from '../views/AboutPage.vue';
-  import { helpCircleOutline } from 'ionicons/icons';
+  import { helpCircleOutline, shareOutline } from 'ionicons/icons';
+  import { share } from '../services/ShareService';
 
   const openAbout = async () => {
     const modal = await modalController.create({
