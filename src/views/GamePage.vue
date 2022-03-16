@@ -1,7 +1,10 @@
 <template>
   <ion-page>
-    <ion-header>
+    <ion-header :translucent="true">
       <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
         <ion-title>Game</ion-title>
         <ion-buttons slot="end">
           <ion-button @click="openAbout">
@@ -15,10 +18,6 @@
 
       <ion-card>
         <ion-card-content>
-          <ion-img 
-            src="https://via.placeholder.com/400x300.png?text=Large+Icon"
-            alt="screenshot" 
-          ></ion-img>
           <ion-grid>
             <ion-row>
               <ion-col>Stats</ion-col>
@@ -36,9 +35,6 @@
         </ion-card-content>
       </ion-card>
 
-      <ion-button fill="outline" expand="block" class="ion-margin-bottom">Quick tutorial</ion-button>
-      <ion-button fill="solid" expand="block" router-link="/game">Start</ion-button>
-    
     </ion-content>
   </ion-page>
 </template>
@@ -46,7 +42,7 @@
 <script lang="ts" setup>
   import { 
     IonContent, IonHeader, IonPage, IonTitle, IonIcon, IonButtons,
-    IonToolbar, IonCard, IonCardContent, IonImg, IonButton,
+    IonToolbar, IonCard, IonCardContent, IonBackButton, IonButton,
     IonGrid, IonRow, IonCol, modalController
   } from '@ionic/vue';
   import AboutPage from '../views/AboutPage.vue';
@@ -66,13 +62,7 @@
 </script>
 
 <style scoped>
-  ion-card {
-    margin: 0 10vw 10vw 10vw;
-  }
-  ion-image {
-    width: 100%;
-  }
-  ion-col:last-child {
-    text-align: right;
+  ion-col {
+    text-align: center;
   }
 </style>
