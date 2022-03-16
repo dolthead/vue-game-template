@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "vue-game-template",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}

@@ -1,0 +1,7 @@
+{
+  "name": "vue-game-template",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
