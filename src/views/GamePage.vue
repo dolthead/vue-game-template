@@ -10,15 +10,13 @@
           <ion-button @click="share(toastController)">
             <ion-icon slot="icon-only" :icon="shareOutline"></ion-icon>
           </ion-button>
-          <ion-button @click="openAbout">
+          <ion-button @click="openAbout()">
             <ion-icon slot="icon-only" :icon="helpCircleOutline"></ion-icon>
           </ion-button>
         </ion-buttons>
       </ion-toolbar>
     </ion-header>
-    
     <ion-content class="ion-padding">
-
       <ion-card>
         <ion-card-content>
           <ion-grid>
@@ -37,7 +35,6 @@
           </ion-grid>
         </ion-card-content>
       </ion-card>
-
     </ion-content>
   </ion-page>
 </template>
@@ -62,7 +59,6 @@
     });
     return modal.present();
   };
-
 </script>
 
 <style scoped>
