@@ -5,7 +5,7 @@ Vue Ionic PWA game template
 - Quick tutorial/walkthrough available
 - ✓ CTA button to PLAY
 - ✓ Stats (🏆 focus on wins)
-- PWA
+- ✓ PWA
 - Icon
 - ✓ Tappable targets, preferably in lower area
 - ✓ Share
